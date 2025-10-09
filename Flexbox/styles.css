@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #121212;
+}
+
+header {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: #004;
+    color: #fff;
+}
+.titulo {
+    background-color: transparent;
+    text-transform: uppercase;
+}
+
+.subtitulo {
+    background-color: transparent;
+    font-size: 15px;
+    margin-top: 10px;
+    color: #fff
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.contenedor-imagenes {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px 10px;
+}

@@ -16,6 +16,3 @@ Cada carpeta contiene un ejercicio independiente con su propio archivo HTML y CS
 
 Seguir aprendiendo y mejorar paso a paso con práctica constante 💪
 
----
-
-¿Quieres que te lo haga más **minimalista**, **divertido**, o **profesional** (por ejemplo, con badges o secciones como “Tecnologías” y “Autor”)?

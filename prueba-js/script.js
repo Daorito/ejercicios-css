@@ -120,3 +120,13 @@ function getRandomNumber() {
 
     return result
 }
+
+//funciones con parametros
+
+function saludarPersona(nombre) {
+    return console.log ("Hola, " + nombre)
+}
+
+function sumarDosNumeros (numb1, numb2) {
+    return numb1 + numb2
+}

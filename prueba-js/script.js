@@ -130,3 +130,9 @@ function saludarPersona(nombre) {
 function sumarDosNumeros (numb1, numb2) {
     return numb1 + numb2
 }
+
+// comentar lgo random por ahora 
+const numeroAleatorio = getRandomNumber()
+console.log("Número aleatorio generado: " + numeroAleatorio)
+
+saludarPersona("Daoritox")

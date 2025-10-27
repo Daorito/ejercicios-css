@@ -136,3 +136,41 @@ const numeroAleatorio = getRandomNumber()
 console.log("Número aleatorio generado: " + numeroAleatorio)
 
 saludarPersona("Daoritox")
+
+// fuction expression 
+
+const sum = function (a, b) {
+    return a +b
+}
+
+sum(3, 5) //8
+
+// arrow function / function flecha
+
+const restaa = (a, b) => {
+    return a - b
+}
+
+restaa(10, 4) //6  
+
+const resta = (a, b) => a - b
+
+resta(10, 4) //6
+
+
+// recursividad 
+
+function cuentaAtrasRecursiva(numero) {
+    if (numero <= 0) { return }
+    console.log(numero)
+    cuentaAtrasRecursiva(numero - 1)
+}
+
+
+function factorial(n) {
+    if (n === 0 || n === 1 ) {
+        return 1
+    } else {
+        return n * factorial(n -1)
+    }
+}

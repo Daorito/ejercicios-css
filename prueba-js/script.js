@@ -174,3 +174,14 @@ function factorial(n) {
         return n * factorial(n -1)
     }
 }
+
+//  CLOUSURES 
+
+const a = "Hey!";
+function global() {
+    const b = "¿Qué"; 
+    function local() {
+        const c = "tal?";
+    }
+    return a + b + c; 
+}

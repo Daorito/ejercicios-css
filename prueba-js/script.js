@@ -185,3 +185,66 @@ function global() {
     }
     return a + b + c; 
 }
+
+//arrays 
+
+const numeritos = [1, 2, 3, 4, 5]
+numeritos[1] = 12 //cambia el valor en la posicion 1
+
+const frutas = ["manzana", "banana", "cereza"]
+frutas.length 
+
+frutas.length = 2 //corta el array a solo 2 elementos
+frutas.push("naranja") //agrega un elemento al final del array
+console.log(frutas) // ["manzana", "banana", "naranja"]
+
+frutas.pop() // saca el ultimo elemento del array y lo devuelve
+frutas.shift() // saca el primer elemento del array y lo devuelve
+console.log(frutas) 
+
+
+frutas.unshift("fresa", "aguacate") // agrega un elemento al inicio del array
+
+// concadenar arrays 
+
+const numerazos = [6, 7, 8] // me estoy quedando sin nombres creativos para las variables JAJA
+const numerazos2 = [9, 10, 11]
+
+const todosLosNumerazosJuntos = numerazos.concat(numerazos2) // une 
+const todosLosNumerazosJuntos2 = [...numerazos, ...numerazos2] // otra forma de unir arrays con spread operator
+
+
+//  Interaccion de arrays 
+
+const frutas2 = ["🍎", "🍌", "🍒", "🍇", "🍉"]
+
+let i = 0; 
+while (i < frutas2.length) {
+    console.log(frutas2[i])
+    i++
+}
+
+// lo mismo con for pero me da pereza crear otra variable llevo 16872516257 variables ya 
+
+for (let i = 0; i < frutas2.length; i++) {
+    console.log(frutas2[i])
+}
+
+for (const fruta of frutas2) {
+    console.log(fruta)
+}
+
+
+// con for each
+
+frutas2.forEach(function (el, index) {
+  console.log("index: " + index);
+  console.log("elemento: " + el);
+});
+
+
+// con arrow fuction
+
+frutas2.forEach(el => {
+    console.log(el)
+})

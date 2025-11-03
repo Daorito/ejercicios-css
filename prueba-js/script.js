@@ -248,3 +248,30 @@ frutas2.forEach(function (el, index) {
 frutas2.forEach(el => {
     console.log(el)
 })
+
+const emojis = ['✨', '🥑', '😍']
+const posicionCorazon = emojis.indexOf('😍') // 
+const tieneCorazon = emojis.includes('😍') // true
+const tieneCorazonDeOtraForma = emojis.some(el => el === '😍') // true
+
+
+const nombres = ['Leo', 'Isa', 'Ían', 'Lea']
+const tieneNombreLargo = nombre.some(el => el.length > 3) // false
+
+
+const emojis2 = ['✨', '🥑', '😍', '🥑']
+const sonTodosAguacates = emojis2.every(el => el === '🥑') // false
+
+
+const numeros = [1, 2, 3, 4, 5, 6]
+const sonPares = numeros.filter(numero => numero % 2 === 0) // false 
+
+// find - encuentra el primer elemento que cumple la condicion
+
+const misNumerazos = [13, 27, 44, -10, 81]
+const primerNumeroNegativo = misNumerazos.find(numero => numero < 0) // -10
+
+// si no lo encuentra 
+
+const misNumerosV1 = [13, 27, 44, 10, 81]
+const primerNumeroNegativoV1 = misNumerosV1.find(numero => numero < 0) // undefined

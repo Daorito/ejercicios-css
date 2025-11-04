@@ -275,3 +275,101 @@ const primerNumeroNegativo = misNumerazos.find(numero => numero < 0) // -10
 
 const misNumerosV1 = [13, 27, 44, 10, 81]
 const primerNumeroNegativoV1 = misNumerosV1.find(numero => numero < 0) // undefined
+
+// vamos a ordenar numeros porque si
+
+const numerosDesordenaos = [4, 2, 5, 1, 3]
+numerosDesordenaos.sort((a, b) => a - b) // [1, 2, 3, 4, 5]
+
+// al reve 
+numerosDesordenaos.sort((a, b) => b - a) // [5, 4, 3, 2, 1]
+
+// Crear arrays a partir de los que ya tenemos 
+
+// ------- FILTER -------
+
+const otraVezNumeros = [10, 15, 20, 25, 30, 35]
+
+const evenNumbers = otraVezNumeros.filter(function (number) {
+    return number % 2 === 0
+}) // [10, 20, 30]
+
+console.log(evenNumbers)
+
+// para todos los que tenga la letra "a"
+
+const palabras = ["manzana", "banana", "cereza", "kiwi", "mango"]
+const palabrasConA = palabras.filter(string => string.includes("a"))
+
+console.log(palabrasConA) // ["manzana", "banana", "cereza", "mango"]
+
+/// ---------------------------------------------------------------------------------
+// --------------------------------- MAP ---------------------------------
+// ---------------------------------------------------------------------------------
+
+
+const numerosParaMapear = [1, 2, 3, 4, 5]
+
+const dobleNumeros = numerosParaMapear.map((number) => {
+    return number * 2
+})
+
+console.log(dobleNumeros) // [2, 4, 6, 8, 10]
+
+// para saber la longitud de cada palabra 
+
+const palabrasParaMapear = ["sol", "luna", "estrella"]
+
+const longitudes = palabrasParaMapear.map(palabra => palabra.length)
+console.log(longitudes) // [3, 4, 8]
+
+
+// ---------------------------------------------------------------------------------
+// --------------------------------- MAP + FILTER    -------------------------------
+// ---------------------------------------------------------------------------------
+
+
+const numerosCombinados = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const numerosMasGrandesQueCinco = numbers 
+    .map(number => number * 2) // [2 , 4, 6, 8, 10, 12, 14, 16, 18, 20]
+    .filter(number => number > 5 ) // [6, 8, 10, 12, 14, 16, 18, 20]
+
+
+console.log(numerosMasGrandesQueCinco) // [6, 8, 10, 12, 14, 16, 18, 20]
+
+// ---------------------------------------------------------------------------------
+// --------------------------------- REDUCE ---------------------------------
+// ---------------------------------------------------------------------------------
+
+const numerosParaReducir = [1, 2, 3, 4, 5]
+
+const sumita =  numerosParaReducir.reduce((acumulador, currentNumber) => {
+    return acumulador + numeroActual
+}, 0) // valor inicial del acumulador
+
+console.log(sumita) // 15
+
+
+
+// usar reduce para tener que evitar crear un array intermedio.
+
+const numerosParaReducirYMapear = [1, 2, 3, 4, 5]
+
+const doubleEvenNumbers = numbers.reduce((accumulator, currentNumber) => {
+    const isEven = currentNumber % 2 === 0
+    const doubled = currentNumber * 2
+    const EsMayorQueCinco = doubled > 5
+
+
+    // si es mayor que cinco lo agregamos al array 
+    if (isEven && EsMayorQueCinco) {
+        // para ello devolvemos un nuevo array con el valor actual 
+        return [acumulator.concat(doubled)]
+    } else {
+        // si no, devolviamos lo que ya teniamos
+        return accumulator
+    }
+}, []) // <--- array vacio es el valor inicial del acumulador
+
+console.log(doubleEvenNumbers) // [6, 8, 10]

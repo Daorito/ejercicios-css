@@ -373,3 +373,41 @@ const doubleEvenNumbers = numbers.reduce((accumulator, currentNumber) => {
 }, []) // <--- array vacio es el valor inicial del acumulador
 
 console.log(doubleEvenNumbers) // [6, 8, 10]
+
+
+// ---------------------------------------------------------------------------------
+// --------------------------------- MATRICES ---------------------------------
+// ---------------------------------------------------------------------------------
+
+const matriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+// interacion sobre matrices 
+
+for (let i = 0; i < matriz.length; i++) { // {1} 
+    for (let j = 0; j < matriz[i].length; j++) { // {2}
+        console.log(matriz[i][j])
+    }
+}
+
+// ejemplo del tres en raya 
+const tablero = [
+    ['X', 'O', 'X'],
+    ['O', 'X', 'O'],
+    ['O', 'X', 'X']
+]
+
+// para buscar un ganador en filas
+
+function buscarGanadorEnFilas(tablero) {
+    for (let i = 0; i < tablero.length; i++) {
+        const fila = tablero[i]
+        if (fila[0] === fila[1] && fila[1] === fila[2]) {
+            return fila[0] // devuelve el ganador
+        }
+    }
+    return null // si no hay ganador
+}

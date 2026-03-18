@@ -411,3 +411,40 @@ function buscarGanadorEnFilas(tablero) {
     }
     return null // si no hay ganador
 }
+
+
+//  ATAJOS DE OBJETOS
+
+const spiderman = {
+    name: "Peter Parker",
+    age: 25, 
+    powers: ["super fuerza", "sentido arácnido", "trepar paredes"],
+}
+
+const {powers} = spiderman // destructuring para sacar solo los poderes del objeto
+console.log(powers) // ["super fuerza", "sentido arácnido", "trepar paredes"]
+
+// Transformando un objeto en un array con for in 
+
+const spiderman2 = {
+    name: "Peter Parker",
+    age: 25, 
+    powers: ["super fuerza", "sentido arácnido", "trepar paredes"],
+}
+
+for (const property in spiderman2) {
+    console.log(property);
+    console.log(spiderman2[property]);
+    (console.log('------------------'));
+}
+
+// Transformando un objeto en un array con Object.keys()
+
+const spiderman3 = {
+    name: "Peter Parker",
+    age: 25, 
+    powers: ["super fuerza", "sentido arácnido", "trepar paredes"],
+}
+
+const spidermanKeys = Object.keys(spiderman3) // ["name", "age", "powers"]
+console.log(spidermanKeys)
